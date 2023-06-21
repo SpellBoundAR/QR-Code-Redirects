@@ -11,4 +11,6 @@ function sendQRScanEvent()
     'Code': urlParams.get('code'),
     'URL Path': window.location.pathname
   })
+
+  console.log("QR scan event sent!")
 }
