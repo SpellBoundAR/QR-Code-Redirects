@@ -11,7 +11,14 @@
   <script>
     window.onload = function() {
 
-        mixpanel.init('88be7bfc5efced7c0f631f9328d54fc2', { debug: true, track_pageview: true });
+        mixpanel.init('88be7bfc5efced7c0f631f9328d54fc2', { debug: true, track_pageview: false });
+
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+      
+        mixpanel.track('QR Scanned', {
+          'ID': urlParams.get('id')
+        })
       
         var userAgent = navigator.userAgent || navigator.vendor || window.opera;
   
