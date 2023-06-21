@@ -17,7 +17,8 @@
         const urlParams = new URLSearchParams(queryString);
       
         mixpanel.track('QR Scanned', {
-          'ID': urlParams.get('id')
+          'Code': urlParams.get('code'),
+          'URL Path': window.location.pathname
         })
       
         var userAgent = navigator.userAgent || navigator.vendor || window.opera;
