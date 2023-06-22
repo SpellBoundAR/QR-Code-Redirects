@@ -9,6 +9,7 @@ function sendQRScanEvent()
   
   mixpanel.track('QR Scan', {
     'Code': urlParams.get('code'),
+    'Variant': urlParams.get('variant'),
     'URL Path': window.location.pathname
   })
 
