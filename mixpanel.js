@@ -1,5 +1,5 @@
 const projectToken = '88be7bfc5efced7c0f631f9328d54fc2';
-const debugToken = '88be7bfc5efced7c0f631f9328d54fc2';
+const debugToken = 'ecc29321aa7720470103f0b6427a8978';
 
 function sendQRScanEvent() 
 {
@@ -11,9 +11,9 @@ function sendQRScanEvent()
   if (debug) mixpanel.init(debugToken, { debug: true, track_pageview: false });
   else mixpanel.init(projectToken, { debug: false, track_pageview: false });
   
-  /*mixpanel.track('QR Scan', {
+  mixpanel.track('QR Scan', {
     'Code': urlParams.has('code') ? urlParams.get('code') : "none",
     'Variant': urlParams.has('variant') ? urlParams.get('variant') : "default",
     'URL Path': window.location.pathname
-  })*/
+  })
 }
