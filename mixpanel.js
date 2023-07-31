@@ -7,7 +7,7 @@ function sendQRScanEvent()
   const urlParams = new URLSearchParams(queryString);
 
   let debug = urlParams.has('debug') && urlParams.get('debug') === true;
-
+  console.log("DEBUG: " + debug);
   if (debug) mixpanel.init(debugToken, { debug: true, track_pageview: false });
   else mixpanel.init(projectToken, { debug: false, track_pageview: false });
   
