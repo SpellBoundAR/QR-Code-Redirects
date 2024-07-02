@@ -1,45 +1,56 @@
+const SpellBoundAR_iOS = "https://apps.apple.com/us/app/spellbound-ar/id1033984853";
+const SpellBoundAR_Android = "https://play.google.com/store/apps/details?id=com.getspellboundbooks.spellbound&hl=en_US&gl=US";
+const VibeARcade_iOS = "https://apps.apple.com/nz/app/vibe-arcade/id6475691258";
+const VibeARcade_Android = "https://play.google.com/store/apps/details?id=com.spellbound.vibearcade";
+const HHGametime_iOS = "https://apps.apple.com/us/app/spellbound-ar/id1033984853";
+const HHGametime_Android = "https://play.google.com/store/apps/details?id=com.getspellboundbooks.spellbound&hl=en_US&gl=US";
+
 function redirectToSpellBoundAppStore()
 {
   var userAgent = navigator.userAgent || navigator.vendor || window.opera;
   
   // Windows Phone must come first because its UA also contains "Android"
   if (/windows phone/i.test(userAgent)) {
-    window.location.href = "https://play.google.com/store/apps/details?id=com.getspellboundbooks.spellbound&hl=en_US&gl=US";
+    window.location.href = SpellBoundAR_Android;
   }
-  
   // Android
   else if (/android/i.test(userAgent)) {
-    window.location.href = "https://play.google.com/store/apps/details?id=com.getspellboundbooks.spellbound&hl=en_US&gl=US";
+    window.location.href = SpellBoundAR_Android;
   }
-  
-  // iOS detection from: http://stackoverflow.com/a/9039885/177710
   else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-    window.location.href = "https://apps.apple.com/us/app/spellbound-ar/id1033984853";
+    window.location.href = SpellBoundAR_iOS;
   }
-  
-  // Base case
-  else window.location.href = "https://apps.apple.com/us/app/spellbound-ar/id1033984853";
+  else window.location.href = SpellBoundAR_iOS;
 }
 
 function redirectToVibeARcadeAppStore()
 {
   var userAgent = navigator.userAgent || navigator.vendor || window.opera;
   
-  // Windows Phone must come first because its UA also contains "Android"
   if (/windows phone/i.test(userAgent)) {
-    window.location.href = "https://play.google.com/store/apps/details?id=com.spellbound.vibearcade";
+    window.location.href = VibeARcade_Android;
   }
-  
-  // Android
   else if (/android/i.test(userAgent)) {
-    window.location.href = "https://play.google.com/store/apps/details?id=com.spellbound.vibearcade";
+    window.location.href = VibeARcade_Android;
   }
-  
-  // iOS detection from: http://stackoverflow.com/a/9039885/177710
   else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-    window.location.href = "https://apps.apple.com/nz/app/vibe-arcade/id6475691258";
+    window.location.href = VibeARcade_iOS;
   }
+  else window.location.href = VibeARcade_iOS;
+}
+
+function redirectToHHGametimeAppStore()
+{
+  var userAgent = navigator.userAgent || navigator.vendor || window.opera;
   
-  // Base case
-  else window.location.href = "https://apps.apple.com/nz/app/vibe-arcade/id6475691258";
+  if (/windows phone/i.test(userAgent)) {
+    window.location.href = HHGametime_Android;
+  }
+  else if (/android/i.test(userAgent)) {
+    window.location.href = HHGametime_Android;
+  }
+  else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+    window.location.href = HHGametime_iOS;
+  }
+  else window.location.href = HHGametime_iOS;
 }
