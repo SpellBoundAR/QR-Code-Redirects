@@ -2,7 +2,7 @@ const SpellBoundAR_iOS = "https://apps.apple.com/us/app/spellbound-ar/id10339848
 const SpellBoundAR_Android = "https://play.google.com/store/apps/details?id=com.getspellboundbooks.spellbound&hl=en_US&gl=US";
 const VibeARcade_iOS = "https://apps.apple.com/nz/app/vibe-arcade/id6475691258";
 const VibeARcade_Android = "https://play.google.com/store/apps/details?id=com.spellbound.vibearcade";
-const HHGametime_iOS = "https://apps.apple.com/us/app/spellbound-ar/id1033984853";
+const HHGametime_iOS = "https://apps.apple.com/us/app/harrisons-heroes-gametime/id6736483985";
 const HHGametime_Android = "https://play.google.com/store/apps/details?id=com.spellbound.harrisonsheroesgametime";
 
 function redirectToSpellBoundAppStore()
